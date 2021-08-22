@@ -71,7 +71,7 @@ public class UserMapperTest {
     public void testDelUser(){
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        boolean b = mapper.delUser(2);
+        boolean b = mapper.delUser(3);
         if(b == true){
             System.out.println("删除成功");
         }
