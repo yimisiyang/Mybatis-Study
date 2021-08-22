@@ -12,6 +12,7 @@
     <!-- 创建子模块后自动生成的 -->
     <modules>
         <module>mybatis-01</module>
+        <module>mybatis-02</module>
     </modules>
 
     <properties>
