@@ -53,3 +53,27 @@ Mybatis默认的事务管理器是jdbc,连接池：POOLED
 - 连接到连接池的一个请求
 - 关闭请求，不是线程安全的，不能被共享，用完后关闭。
 
+
+
+### 3. 结果集映射
+
+目的：解决实体类与数据库字段名称不一致的问题。
+
+解决上述问题两种方法：
+
+- 通过select 语句起别名的方式
+- 通过 resultMap结果集映射的方式
+
+```xml
+<resultMap id="UserMap" type="User">
+  <id property="id" column="user_id" />
+  <result property="username" column="user_name"/>
+  <result property="password" column="hashed_password"/>
+</resultMap>
+<select id="getUserById" resultMap="UserMap">
+	select * from mybaties.t_user where id = #{id}
+</select>
+```
+
+
+
