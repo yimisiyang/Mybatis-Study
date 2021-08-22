@@ -3,6 +3,7 @@ package cn.tj712.mapper;
 import cn.tj712.pojo.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -31,6 +32,13 @@ public interface UserMapper {
      * @return
      */
     boolean addUser(User user);
+
+    /**
+     * 插入一个用户
+     * @param map
+     * @return
+     */
+    boolean addUser2(Map<String,Object> map);
 
     /**
      * 修改用户

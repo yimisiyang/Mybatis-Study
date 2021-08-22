@@ -18,6 +18,10 @@
         insert into mybatis.t_user(`id`,`name`,`pwd`) values (#{id},#{name},#{pwd})
     </insert>
 
+    <!--  插入一个用户2  -->
+    <insert id="addUser2" parameterType="map">
+        insert into mybatis.t_user(`id`,`name`,`pwd`) values (#{userid},#{userName},#{passWord})
+    </insert>
     <!--  修改用户  -->
     <update id="updateUser" parameterType="cn.tj712.pojo.User">
         update mybatis.t_user set `name` = #{name}, `pwd` = #{pwd} where id = #{id}
