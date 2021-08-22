@@ -4,7 +4,28 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace绑定一个对应的Dao/Mapper接口-->
 <mapper namespace="cn.tj712.mapper.UserMapper">
+    <!--  查询语句  -->
     <select id="getUserList" resultType="cn.tj712.pojo.User">
         select * from mybatis.t_user
     </select>
+    <!--  根据ID查询数据库  -->
+    <select id="getUserById" parameterType="int" resultType="cn.tj712.pojo.User">
+        select * from mybatis.t_user where id = #{id}
+    </select>
+
+    <!--  插入一个用户  -->
+    <insert id="addUser" parameterType="cn.tj712.pojo.User">
+        insert into mybatis.t_user(`id`,`name`,`pwd`) values (#{id},#{name},#{pwd})
+    </insert>
+
+    <!--  修改用户  -->
+    <update id="updateUser" parameterType="cn.tj712.pojo.User">
+        update mybatis.t_user set `name` = #{name}, `pwd` = #{pwd} where id = #{id}
+    </update>
+
+    <!--删除一个用户-->
+    <delete id="delUser" parameterType="int">
+        delete from mybatis.t_user where id = #{id}
+    </delete>
+
 </mapper>
