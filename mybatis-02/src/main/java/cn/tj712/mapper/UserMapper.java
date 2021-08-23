@@ -47,4 +47,17 @@ public interface UserMapper {
      */
     boolean delUser(int id);
 
+    /**
+     * 分页功能实现
+     * @param map
+     * @return
+     */
+    List<User> getUserByLimit(Map<String, Integer> map);
+
+    /**
+     * 通过RowBounds 实现分页
+     * @return
+     */
+    List<User> getUserByRowBounds();
+
 }

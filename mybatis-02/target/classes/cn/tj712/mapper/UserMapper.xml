@@ -28,4 +28,8 @@
         delete from mybatis.t_user where id = #{id}
     </delete>
 
+    <!--  分页查询实现  -->
+    <select id="getUserByLimit" parameterType="map" resultType="user">
+        select * from mybatis.t_user limit #{startIndex},#{pageSize}
+    </select>
 </mapper>

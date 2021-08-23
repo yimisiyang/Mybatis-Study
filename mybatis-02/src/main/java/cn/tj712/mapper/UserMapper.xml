@@ -28,4 +28,13 @@
         delete from mybatis.t_user where id = #{id}
     </delete>
 
+    <!--  分页查询实现  -->
+    <select id="getUserByLimit" parameterType="map" resultType="user">
+        select * from mybatis.t_user limit #{startIndex},#{pageSize}
+    </select>
+
+    <!--  通过RowBounds进行分页  -->
+    <select id="getUserByRowBounds" resultType="userMap">
+        select * from mybatis.t_user
+    </select>
 </mapper>
