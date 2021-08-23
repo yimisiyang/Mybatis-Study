@@ -1,0 +1,15 @@
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Opening JDBC Connection
+Created connection 188523822.
+Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@b3ca52e]
+==>  Preparing: select * from mybatis.t_user 
+==> Parameters: 
+<==      Total: 2
+Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@b3ca52e]
+Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@b3ca52e]
+Returned connection 188523822 to pool.
