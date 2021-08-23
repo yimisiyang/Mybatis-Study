@@ -3,6 +3,7 @@ package cn.tj712.mapper;
 import cn.tj712.pojo.User;
 import cn.tj712.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import java.util.List;
@@ -15,6 +16,8 @@ import java.util.List;
  * @author: ThinkPad
  */
 public class UserMapperTest {
+
+    static Logger logger = Logger.getLogger(UserMapperTest.class);
     @Test
     public void testGetUserList(){
         //获得sqlSession对象
@@ -31,5 +34,12 @@ public class UserMapperTest {
 
         //关闭sqlSession
         sqlSession.close();
+    }
+
+    @Test
+    public void testLog4j(){
+        logger.info("info: 进入了testLog4j方法");
+        logger.debug("debug: 进入了testLog4j");
+        logger.error("error: 进入了log4j");
     }
 }

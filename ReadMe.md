@@ -75,5 +75,17 @@ Mybatis默认的事务管理器是jdbc,连接池：POOLED
 </select>
 ```
 
+### 4. 日志工厂
 
+logimpl指定 mybatis所有日志的具体实现，未指定时将会自动查找
+
+- SLF4J 
+- LOG4J 【掌握】
+- LOG4J2 
+-  JDK_LOGGING
+-  COMMONS_LOGGING 
+-  STDOUT_LOGGING【掌握】
+-  NO_LOGGING 
+
+在mybatis中具体使用什么日志实现，由设置中指定。（在mybatis的核心配置文件中配置）
 

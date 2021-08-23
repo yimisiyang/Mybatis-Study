@@ -1,0 +1,18 @@
+info: 进入了testLog4j方法
+debug: 进入了testLog4j
+error: 进入了log4j
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Opening JDBC Connection
+Created connection 220309324.
+Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d21a74c]
+==>  Preparing: select * from mybatis.t_user 
+==> Parameters: 
+<==      Total: 2
+Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d21a74c]
+Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d21a74c]
+Returned connection 220309324 to pool.
